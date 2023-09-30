@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HomeServiceService } from '../services/home-service.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  cats : any = []
+  constructor(
+    private homeServiceService : HomeServiceService
+  ) {}
+
+  ngOnInit(){
+  this.getInformationCats();
+  }
+
+  getInformationCats (){
+    this.homeServiceService.getCats()
+    this.homeServiceService.getCats().subscribe((data) => {
+      this.cats = data;
+      console.log(data); 
+    });
+  }
+
+
 
 }

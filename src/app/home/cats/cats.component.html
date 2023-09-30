@@ -1,0 +1,18 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{ cat.name }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item>
+      <div class="content-img">
+        <img appImgDefault  [src]="comvertImageUrl(cat.reference_image_id)" />
+      </div>
+    </ion-item>
+
+    <p>Origin: {{ cat.origin }}</p>
+    <p>Affection: {{ cat.affection_level }}</p>
+    <p>intelligence: {{ cat.intelligence }}</p>
+
+  </ion-card-content>
+</ion-card>

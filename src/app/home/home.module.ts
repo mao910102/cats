@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { CatsComponent } from './cats/cats.component';
+import { ImgDefaultDirective } from '../img-default.directive';
 
 
 @NgModule({
@@ -14,6 +16,10 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    CatsComponent,
+    ImgDefaultDirective
+  ]
 })
 export class HomePageModule {}
